@@ -69,10 +69,12 @@ Of course, there are also disadvantages, with the major one being much lower ene
 I am aware of one (somewhat) commercial product in this class, the [RAM Ultra UPS 8000](http://www.ramtechno.com/articles/13-ram-ultra-ups-8000).
 I discovered its availability after I have finished designing V2 and waiting for prototype board.
 
-It is advertised as medical grade backup power supply.
-And I suspect the market for this product is very small, as documentations are very scarce.
-
 Naturally, I ordered a couple of them to play with. :)
+
+It is advertised as medical grade backup power supply, designed to mount internally to device chassis.
+It does not come with much (any at all) packaging or casing. However, this is not a critical downside, as it is light-weighted, can be mounted to a secure and hard to reach location. And in addition, the energy storage is made of super capacitors, which is much more tolerant to physical abuse than Lithium batteries.
+
+Documentations are very scarce, but eventually I am able to verify its functionality.
 And I found it has some desired features, and also some lacking ones.
 
 1. It has rate controlled charging circuit. This is important, because super capacitors, unlike batteries, have very low internal resistance. When applied a voltage without current control, the current blow off the roof, and can easily damage the power supply.
