@@ -92,7 +92,7 @@ My design incorporates four major features that I deem important for the applica
 
 1. Autonomous Operation: the circuit is able to achieve power failover and recharge of backup reserve by itself without external assist.
 2. Rate controlled charging: Make sure charging of backup reserve does not overload the up-stream power supply.
-3. Output regulation: To efficiently store and extract energy in super capacitors, buck-boost voltage regulation is provided.
+3. Output regulation: To efficiently extract energy in super capacitors, buck-boost output voltage regulation is provided.
 4. "Smart" and Internet-enabled: When power events happen (such as power failure and restoration, backup reserve depletion), you could programmatically respond to those events, such as getting email notifications, asserting alarms (to cameras), etc. This is made possible thanks to the all-mighty tiny WiFi SoC, ESP8266.
 
 ## Version History
