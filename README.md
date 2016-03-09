@@ -99,22 +99,26 @@ My design incorporates four major features that I deem important for the applica
 * V0 never made it to the sun.
 
   Back in early 2015, I never learned PCB design at that time.
-  I was trying to prototype *by hand* using breadboards PCBs, not a very good idea with more than 10 nets and 20 solder points.
+  I was trying to prototype *by hand* using breadboards PCBs, not a very good idea with more than 5 nets and 20 solder points.
   Clearly, custom PCB is the way to go. I therefore started to learn how to design PCBs
 
 * V1 was mostly based on diodes and relays.
 
   Two months later, actually my first PCB, ever. :)
+
+  <img src="SCAP1Render.PNG" width="384"> <img src="SCAP1Assembled.jpg" width="384">
+
   It does not handle capacitor charging rate control, output voltage regulation, or MCU integration.
   The first two functions were to be achieved by external modules, such as [PT4115 constant current driver](https://www.google.com/search?hl=en&site=imghp&tbm=isch&source=hp&q=constant+current+driver+board+with+PT4115), and [adjustable boost regulators](https://www.google.com/search?hl=en&site=imghp&tbm=isch&source=hp&q=boost+regulator+module).
-  
-  <img src="SCAP1Render.PNG" width="384"> <img src="SCAP1Assembled.jpg" width="384">
-  
+
   There is one design issue -- double-throw relays are usually break-before-make, so they have a total disconnection state, when the switches change states from one to another. However, for electro-magnetic mechanical relays, if the voltage change is slow enough, the total disconnection state can be quite long, up to several minutes!
 
 * V2 is a complete overhaul
 
   As you can see, it looks significantly more sophisticated and mature than V1.
+
+  <img src="SCAP2Render.PNG" width="384"> <img src="SCAP2Assembled.jpg" width="384">
+
   It was completed 10 months after I started PCB designing. At that point I have already successfully done over 8 smaller projects, involving experiment with many SMPS, for my (ESP8266 batter powering project)[https://github.com/Adam5Wu/Micro-power-SMPS].
   This version boasts built-in capacitor charging rate control, output voltage regulation, and MCU integration.
   Only one mechanical relay is used, in order to reduce PCB footprint and increase reliability of controls.
