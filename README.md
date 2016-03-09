@@ -64,7 +64,7 @@ Compared with batteries, super capacitors have following advantages:
 
 These advantages mean that it is easier, and safer to mount super capacitor as energy storage near important assets.
 
-Of course, there are also disadvantages, with the major one being much lower energy density (read: more space for the same energy stored). However, for the specific scenario of ride-through during generation startup, the lower energy density is not a show stopper -- if the generator will definitely kick in within 1 minute, only have 2~3 minutes of backup power is completely acceptable!
+Of course, there are also disadvantages, with the major one being much lower energy density (read: more space for the same energy stored). However, for the specific scenario of ride-through during generator startup, the lower energy density is not a show stopper -- if the generator will definitely kick in within 1 minute, only have 2~3 minutes of backup power is completely acceptable!
 
 I am aware of one (somewhat) commercial product in this class, the [RAM Ultra UPS 8000](http://www.ramtechno.com/articles/13-ram-ultra-ups-8000).
 I discovered its availability after I have finished designing V2 and waiting for prototype board.
