@@ -11,19 +11,20 @@
 ---
 
 # Prologue
-You just set up a nice shiny surviellience IP camera, and now you have a 24x7 view to your important asset.
+You just set up a nice shiny surveillance IP camera, and now you have a 24x7 view to your important asset.
 And your camera has motion detection with recording, and can even shoot you an email when something interesting happens.
-Brillant!
+
+Brilliant!
 
 But the next question soon comes: you camera needs power to operate, constant power.
-If power goes black or brown, or even flickers a bit, the camera will loose ability to view, record as well as detect events for a period of time.
+If power goes black or brown, or even flickers a bit, the camera will lose ability to view, record as well as detect events for a period of time.
 And you won't get an email if this happens.
 
 What about battery? Well, the power consumption of a camera is moderate at best, not something you can shovel a battery or two and forget about it for a couple of months.
 The power should come from the wall.
 
-OK, you are serious about the robustness of your surviellience, you got a backup generator.
-But it still won't give you uninterrupted surviellience, because when power fails, backup generators need some time to kick in.
+OK, you are serious about the robustness of your surveillance, you got a backup generator.
+But it still won't give you uninterrupted surveillance, because when power fails, backup generators need some time to kick in.
 And you would still be blinded during generator startup, unless you do something about it.
 
 You need an uninterruptible power supply (UPS).
@@ -54,10 +55,10 @@ Only one mechanical relay is used, in order to reduce PCB footprint and increase
 
 There is a minor design flaw -- The current path control should draw voltage before indicator LED, not after, as LEDs are diodes, which incur voltage drops, and thus rendered the control signal unreliable.
 
-V3 is currently bein designed.
+V3 is currently being designed.
 It is an improved version of V2, on the following aspects:
 1. Completely eliminate mechanical relay use
-2. Increased voltage hystersis for super capacitor, from 4.3v-off-5v-on to 4.3v-off-8.8v-on
+2. Increased voltage hysteresis for super capacitor, from 4.3v-off-5v-on to 4.3v-off-8.8v-on
 3. Configurable power out soft-start based on capacitor charge progress, keep power out off until capacitor reaches 8.8v
 4. Ability to power off MCU circuits
 
