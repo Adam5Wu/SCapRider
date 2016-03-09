@@ -75,14 +75,22 @@ Naturally, I ordered a couple of them to play with. :)
 And I found it has some desired features, and also some lacking ones.
 
 1. It has rate controlled charging circuit. This is important, because super capacitors, unlike batteries, have very low internal resistance. When applied a voltage without current control, the current blow off the roof, and can easily damage the power supply.
+
   However, the default charge rate was set too high, peak around 6~8 Amps. I blew a 3A fuse shortly after trying to charge one up. (Yes, I put fuse everywhere, guess how I learned to do that... :D) I modified it to ~2A.
 2. It has charge voltage limit, to prevent overvoltage on the capacitors. The default limit is also a little to high in my opinion, at slightly above 10.8V for 4x2.7v capacitors. I modified it to 10v, try to prolong the life of the capacitors.
 3. It does NOT have under-voltage sensing, or automatic backup trigger. Instead, it has a PGOOD input, which has to be asserted low **before** the power input is lost, in order to kick in the backup circuit.
-  This is a major downside, meaning that it cannot be directly applied as a UVRT power supply. Additional supervisory circuit is needed to achieve this goal.
+
+  This is a **major downside**, meaning that it cannot be directly applied as a UVRT power supply. Additional supervisory circuit is needed to achieve this goal.
 
 ---
 
 # Current Design
+My design incorporates four major features that I deem important for the applicable scenarios.
+
+1. Autonomous Operation: the circuit is able to achieve power failover and recharge of backup reserve by itself without external assist.
+2. Rate controlled charging: Make sure charging of backup reserve does not overload the up-stream power supply.
+3. Output regulation: To efficiently store and extract energy in super capacitors, buck-boost voltage regulation is provided.
+4. "Smart" and Internet-enabled: When power events happen (such as power failure and restoration, backup reserve depletion), you could programmatically respond to those events, such as getting email notifications, asserting alarms (to cameras), etc. This is made possible thanks to the all-mighty tiny WiFi SoC, ESP8266.
 
 ## Version History
 V1 was mostly based on diodes and relays.
