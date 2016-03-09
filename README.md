@@ -50,7 +50,7 @@ For example you can buy OpenUPS boards, and hook up with batteries of your choic
 With this combination, you can DIY a solution with lighter weight, reduced space footprint, and much better efficiency (by avoiding DC-AC-DC conversions).
 
 However, the biggest problem with this type of solution is safety.
-Chemical batteries are capable of storing a HUGE amount of energy, and if not handled carefully, they usually end up in disasters. Compared with commercial products, DIY solutions usually have inferior protections against environmental elements, such as vibration, puncture, water, etc. And lithium batteries, compared with Lead-Acid, are [much more volatile](http://batteryuniversity.com/learn/article/lithium_ion_safety_concerns). Combining these two factors, it is not hard to conclude that is it not wise to put Lithium battery based custom UPS near important assets.
+Chemical batteries are capable of storing a HUGE amount of energy, and if not handled carefully, they usually end up in disasters. Compared with commercial products, DIY solutions usually have inferior protections against physical harzards, such as vibration, puncture, water, etc. And lithium batteries, compared with Lead-Acid, are [much more volatile](http://batteryuniversity.com/learn/article/lithium_ion_safety_concerns). Combining these two factors, it is not hard to conclude that is it not wise to put Lithium battery based custom UPS near important assets.
 
 ## SuperCapacitor-based Solutions
 
