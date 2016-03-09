@@ -29,14 +29,56 @@ And you would still be blinded during generator startup, unless you do something
 
 You need an uninterruptible power supply (UPS).
 
-Or to be more precise (and sounds classy), Under-Voltage Ride Through (UVRT).
+Or to be more precise (and sounds classy), [Under-Voltage Ride Through (UVRT)](https://en.wikipedia.org/wiki/Low_voltage_ride_through).
 
 ---
 
 # Solution Space
 ## Battery-based Solutions
+### Commercial Off-The-Shelf UPS
+Sealed-Lead-Acid (SLA) battery-based UPSs are commodities. You can grab a decent one from Amazon or eBay for $80~$100.
+
+However:
+1. They are heavy. You cannot mount it on walls -- if one fell off somehow, on your foot, you probably can kiss one or two of your toes goodbye.
+2. They are bulky. You need to reserve a dedicated space to install one, a space you won't have under your soffit.
+3. They are inefficient. The DC power stored in battery is first converted to AC, and then back to DC for your camera. Overall, you get 50~60% efficiency if you are lucky.
+
+### Custom UPS
+Direct Current (DC) UPS, combined with Lithium family batteries are available, however, not so "commodity".
+For example you can buy OpenUPS boards, and hook up with batteries of your choice, such as LiPo, or LiFePO4.
+With this combination, you can DIY a solution with lighter weight, reduced space footprint, and much better efficiency (by avoiding DC-AC-DC conversions).
+
+However, the biggest problem with this type of solution is safety.
+Chemical batteries are capable of storing a HUGE amount of energy, and if not handled carefully, they usually end up in disasters. Compared with commercial products, DIY solutions usually have inferior protections against environmental elements, such as vibration, puncture, water, etc. And lithium batteries, compared with Lead-Acid, are [much more volatile](http://batteryuniversity.com/learn/article/lithium_ion_safety_concerns). Combining these two factors, it is not hard to conclude that is it not wise to put Lithium battery based custom UPS near important assets.
 
 ## SuperCapacitor-based Solutions
+
+[SuperCapacitors](https://en.wikipedia.org/wiki/Supercapacitor) are rising alternative energy storage devices.
+
+Compared with batteries, super capacitors have following advantages:
+
+1. Higher specific energy (read: lighter weight for the same energy stored)
+2. Better endurance (higher recharge cycles, deeper discharge, faster recharge, no memory effect, etc.)
+3. Physical Stability ([very limited consequence](https://www.unece.org/fileadmin/DAM/trans/doc/2008/ac10c3/UN-SCETDG-34-INF38e.pdf) from physical abuse)
+
+These advantages mean that it is easier, and safer to mount super capacitor as energy storage near important assets.
+
+Of course, there are also disadvantages, with the major one being much lower energy density (read: more space for the same energy stored). However, for the specific scenario of ride-through during generation startup, the lower energy density is not a show stopper -- if the generator will definitely kick in within 1 minute, only have 2~3 minutes of backup power is completely acceptable!
+
+I am aware of one (somewhat) commercial product in this class, the [RAM Ultra UPS 8000](http://www.ramtechno.com/articles/13-ram-ultra-ups-8000).
+I discovered its availability after I have finished designing V2 and waiting for prototype board.
+
+It is advertised as medical grade backup power supply.
+And I suspect the market for this product is very small, as documentations are very scarce.
+
+Naturally, I ordered a couple of them to play with. :)
+And I found it has some desired features, and also some lacking ones.
+
+1. It has rate controlled charging circuit. This is important, because super capacitors, unlike batteries, have very low internal resistance. When applied a voltage without current control, the current blow off the roof, and can easily damage the power supply.
+  However, the default charge rate was set too high, peak around 6~8 Amps. I blew a 3A fuse shortly after trying to charge one up. (Yes, I put fuse everywhere, guess how I learned to do that... :D) I modified it to ~2A.
+2. It has charge voltage limit, to prevent overvoltage on the capacitors. The default limit is also a little to high in my opinion, at slightly above 10.8V for 4x2.7v capacitors. I modified it to 10v, try to prolong the life of the capacitors.
+3. It does NOT have under-voltage sensing, or automatic backup trigger. Instead, it has a PGOOD input, which has to be asserted low **before** the power input is lost, in order to kick in the backup circuit.
+  This is a major downside, meaning that it cannot be directly applied as a UVRT power supply. Additional supervisory circuit is needed to achieve this goal.
 
 ---
 
@@ -59,7 +101,7 @@ V3 is currently being designed.
 It is an improved version of V2, on the following aspects:
 1. Completely eliminate mechanical relay use
 2. Increased voltage hysteresis for super capacitor, from 4.3v-off-5v-on to 4.3v-off-8.8v-on
-3. Configurable power out soft-start based on capacitor charge progress, keep power out off until capacitor reaches 8.8v
+3. Configurable power out soft-start based on capacitor charge progress; keep power out off until capacitor reaches 8.8v
 4. Ability to power off MCU circuits
 
 ## Layout Software Used
