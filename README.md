@@ -96,30 +96,36 @@ My design incorporates four major features that I deem important for the applica
 4. "Smart" and Internet-enabled: When power events happen (such as power failure and restoration, backup reserve depletion), you could programmatically respond to those events, such as getting email notifications, asserting alarms (to cameras), etc. This is made possible thanks to the all-mighty tiny WiFi SoC, ESP8266.
 
 ## Version History
-V0 never made it to the sun.
-Back in early 2015, I never learned PCB design at that time.
-I was trying to prototype *by hand* using breadboards PCBs, not a very good idea with more than 10 nets and 20 solder points.
-Clearly, custom PCB is the way to go. I therefore started to learn how to design PCBs
+* V0 never made it to the sun.
 
-V1 was mostly based on diodes and relays.
-Actually my first PCB, ever. :)
-It does not handle capacitor charging rate control, output voltage regulation, or MCU integration.
-The first two functions were to be achieved by external modules, such as [PT4115 constant current driver](https://www.google.com/search?hl=en&site=imghp&tbm=isch&source=hp&q=constant+current+driver+board+with+PT4115), and [adjustable boost regulators](https://www.google.com/search?hl=en&site=imghp&tbm=isch&source=hp&q=boost+regulator+module).
+  Back in early 2015, I never learned PCB design at that time.
+  I was trying to prototype *by hand* using breadboards PCBs, not a very good idea with more than 10 nets and 20 solder points.
+  Clearly, custom PCB is the way to go. I therefore started to learn how to design PCBs
 
-There is also one design issue -- double-throw relays are usually break-before-make, so there exists a total disconnection state, when relay changes states from one to another. However, for electro-magnetic mechanical relays, if the voltage change is slow enough, the total disconnection state can be quite long, up to several minutes!
+* V1 was mostly based on diodes and relays.
 
-V2 is almost a complete redesign, after I gathered a hefty knowledge on SMPS and ESP8266.
-It has built-in capacitor charging rate control, output voltage regulation, and MCU integration.
-Only one mechanical relay is used, in order to reduce PCB footprint and increase reliability of controls.
+  Two months later, actually my first PCB, ever. :)
+  It does not handle capacitor charging rate control, output voltage regulation, or MCU integration.
+  The first two functions were to be achieved by external modules, such as [PT4115 constant current driver](https://www.google.com/search?hl=en&site=imghp&tbm=isch&source=hp&q=constant+current+driver+board+with+PT4115), and [adjustable boost regulators](https://www.google.com/search?hl=en&site=imghp&tbm=isch&source=hp&q=boost+regulator+module).
+  There is one design issue -- double-throw relays are usually break-before-make, so there exists a total disconnection state, when relay changes states from one to another. However, for electro-magnetic mechanical relays, if the voltage change is slow enough, the total disconnection state can be quite long, up to several minutes!
 
-There is a minor design flaw -- The current path control should draw voltage before indicator LED, not after, as LEDs are diodes, which incur voltage drops, and thus rendered the control signal unreliable.
+* V2 is a complete overhaul
 
-V3 is currently being designed.
-It is an improved version of V2, on the following aspects:
-1. Completely eliminate mechanical relay use
-2. Increased voltage hysteresis for super capacitor, from 4.3v-off-5v-on to 4.3v-off-8.8v-on
-3. Configurable power out soft-start based on capacitor charge progress; keep power out off until capacitor reaches 8.8v
-4. Ability to power off MCU circuits
+  As you can see, it looks significantly more sophiscated and mature than V1.
+  It was completed 10 months after I started PCB designing. At that point I have already successfully done over 8 smaller projects, involving experiment with many SMPS, for my (ESP8266 batter powering project)[https://github.com/Adam5Wu/Micro-power-SMPS].
+  This version boast built-in capacitor charging rate control, output voltage regulation, and MCU integration.
+  Only one mechanical relay is used, in order to reduce PCB footprint and increase reliability of controls.
+
+  A minor design flaw was uncovered during prototype assembly -- the current path control should draw voltage before indicator LED, not after, as LEDs are diodes, which incur voltage drops, and thus rendered the control signal unreliable. The rendered PCB image already corrected the problem.
+
+* V3 is currently being designed.
+
+  It is an improved version of V2, on the following aspects:
+  
+  1. Completely eliminate mechanical relay use
+  2. Increased voltage hysteresis for super capacitor, from 4.3v-off-5v-on to 4.3v-off-8.8v-on
+  3. Configurable power out soft-start based on capacitor charge progress; keep power out off until capacitor reaches 8.8v
+  4. Ability to power off MCU circuits
 
 ## Layout Software Used
 PCBWeb http://www.pcbweb.com/
