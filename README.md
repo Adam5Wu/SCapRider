@@ -38,7 +38,8 @@ Or to be more precise (and sounds classy), [Under-Voltage Ride Through (UVRT)](h
 ### Commercial Off-The-Shelf UPS
 Sealed-Lead-Acid (SLA) battery-based UPSs are commodities. You can grab a decent one from Amazon or eBay for $80~$100.
 
-However:
+However, they are not ideal for the job:
+
 1. They are heavy. You cannot mount it on walls -- if one fell off somehow, on your foot, you probably can kiss one or two of your toes goodbye.
 2. They are bulky. You need to reserve a dedicated space to install one, a space you won't have under your soffit.
 3. They are inefficient. The DC power stored in battery is first converted to AC, and then back to DC for your camera. Overall, you get 50~60% efficiency if you are lucky.
