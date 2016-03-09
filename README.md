@@ -117,7 +117,7 @@ My design incorporates four major features that I deem important for the applica
 
   As you can see, it looks significantly more sophisticated and mature than V1.
 
-  <img src="SCAP2Render.PNG" height="320"> <img src="SCAP2Assembled.jpg" height="320">
+  <img src="SCAP2Render.PNG" height="320"> <img src="SCAP2Assembled1.jpg" height="320">
 
   It was completed 10 months after I started PCB designing. At that point I have already successfully done over 8 smaller projects, involving experiment with many SMPS, for my [ESP8266 batter powering project](/Adam5Wu/Micro-power-SMPS).
   
