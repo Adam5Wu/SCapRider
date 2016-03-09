@@ -113,17 +113,18 @@ My design incorporates four major features that I deem important for the applica
 
   There is one design issue -- double-throw relays are usually break-before-make, so they have a total disconnection state, when the switches change states from one to another. However, for electro-magnetic mechanical relays, if the voltage change is slow enough, the total disconnection state can be quite long, up to several minutes!
 
-* V2 is a complete overhaul
+* V2 is a complete overhaul.
 
   As you can see, it looks significantly more sophisticated and mature than V1.
 
   <img src="SCAP2Render.PNG" width="384"> <img src="SCAP2Assembled.jpg" width="384">
 
-  It was completed 10 months after I started PCB designing. At that point I have already successfully done over 8 smaller projects, involving experiment with many SMPS, for my (ESP8266 batter powering project)[https://github.com/Adam5Wu/Micro-power-SMPS].
+  It was completed 10 months after I started PCB designing. At that point I have already successfully done over 8 smaller projects, involving experiment with many SMPS, for my [ESP8266 batter powering project](/Adam5Wu/Micro-power-SMPS).
+  
   This version boasts built-in capacitor charging rate control, output voltage regulation, and MCU integration.
   Only one mechanical relay is used, in order to reduce PCB footprint and increase reliability of controls.
 
-  A minor design flaw was uncovered during prototype assembly -- the current path control should draw voltage before indicator LED, not after, as LEDs are diodes, which incur voltage drops, and thus rendered the control signal unreliable. The rendered PCB image already corrected the problem.
+  A minor design flaw was uncovered during prototype assembly -- the current path control should draw voltage before indicator LED, not after, as LEDs are diodes, which incur voltage drops, and thus rendered the control signal unreliable. The rendered PCB image above already corrected the problem.
 
 * V3 is currently being designed.
 
