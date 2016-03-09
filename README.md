@@ -107,6 +107,9 @@ My design incorporates four major features that I deem important for the applica
   Two months later, actually my first PCB, ever. :)
   It does not handle capacitor charging rate control, output voltage regulation, or MCU integration.
   The first two functions were to be achieved by external modules, such as [PT4115 constant current driver](https://www.google.com/search?hl=en&site=imghp&tbm=isch&source=hp&q=constant+current+driver+board+with+PT4115), and [adjustable boost regulators](https://www.google.com/search?hl=en&site=imghp&tbm=isch&source=hp&q=boost+regulator+module).
+  
+  <img src="SCAP1Render.PNG" width="384"> <img src="SCAP1Assembled.jpg" width="384">
+  
   There is one design issue -- double-throw relays are usually break-before-make, so they have a total disconnection state, when the switches change states from one to another. However, for electro-magnetic mechanical relays, if the voltage change is slow enough, the total disconnection state can be quite long, up to several minutes!
 
 * V2 is a complete overhaul
