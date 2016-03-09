@@ -107,13 +107,13 @@ My design incorporates four major features that I deem important for the applica
   Two months later, actually my first PCB, ever. :)
   It does not handle capacitor charging rate control, output voltage regulation, or MCU integration.
   The first two functions were to be achieved by external modules, such as [PT4115 constant current driver](https://www.google.com/search?hl=en&site=imghp&tbm=isch&source=hp&q=constant+current+driver+board+with+PT4115), and [adjustable boost regulators](https://www.google.com/search?hl=en&site=imghp&tbm=isch&source=hp&q=boost+regulator+module).
-  There is one design issue -- double-throw relays are usually break-before-make, so there exists a total disconnection state, when relay changes states from one to another. However, for electro-magnetic mechanical relays, if the voltage change is slow enough, the total disconnection state can be quite long, up to several minutes!
+  There is one design issue -- double-throw relays are usually break-before-make, so they have a total disconnection state, when the switches change states from one to another. However, for electro-magnetic mechanical relays, if the voltage change is slow enough, the total disconnection state can be quite long, up to several minutes!
 
 * V2 is a complete overhaul
 
-  As you can see, it looks significantly more sophiscated and mature than V1.
+  As you can see, it looks significantly more sophisticated and mature than V1.
   It was completed 10 months after I started PCB designing. At that point I have already successfully done over 8 smaller projects, involving experiment with many SMPS, for my (ESP8266 batter powering project)[https://github.com/Adam5Wu/Micro-power-SMPS].
-  This version boast built-in capacitor charging rate control, output voltage regulation, and MCU integration.
+  This version boasts built-in capacitor charging rate control, output voltage regulation, and MCU integration.
   Only one mechanical relay is used, in order to reduce PCB footprint and increase reliability of controls.
 
   A minor design flaw was uncovered during prototype assembly -- the current path control should draw voltage before indicator LED, not after, as LEDs are diodes, which incur voltage drops, and thus rendered the control signal unreliable. The rendered PCB image already corrected the problem.
