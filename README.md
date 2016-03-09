@@ -46,14 +46,13 @@ However, they are not ideal for the job:
 
 ### Custom UPS
 Direct Current (DC) UPS, combined with Lithium family batteries are available, however, not so "commodity".
-For example you can buy OpenUPS boards, and hook up with batteries of your choice, such as LiPo, or LiFePO4.
+For example you can buy [OpenUPS boards](http://www.mini-box.com/OpenUPS), and hook up with batteries of your choice, such as LiPo, or LiFePO4.
 With this combination, you can DIY a solution with lighter weight, reduced space footprint, and much better efficiency (by avoiding DC-AC-DC conversions).
 
 However, the biggest problem with this type of solution is safety.
 Chemical batteries are capable of storing a HUGE amount of energy, and if not handled carefully, they usually end up in disasters. Compared with commercial products, DIY solutions usually have inferior protections against physical harzards, such as vibration, puncture, water, etc. And lithium batteries, compared with Lead-Acid, are [much more volatile](http://batteryuniversity.com/learn/article/lithium_ion_safety_concerns). Combining these two factors, it is not hard to conclude that is it not wise to put Lithium battery based custom UPS near important assets.
 
 ## SuperCapacitor-based Solutions
-
 [SuperCapacitors](https://en.wikipedia.org/wiki/Supercapacitor) are rising alternative energy storage devices.
 
 Compared with batteries, super capacitors have following advantages:
@@ -66,6 +65,7 @@ These advantages mean that it is easier, and safer to mount super capacitor as e
 
 Of course, there are also disadvantages, with the major one being much lower energy density (read: more space for the same energy stored). However, for the specific scenario of ride-through during generator startup, the lower energy density is not a show stopper -- if the generator will definitely kick in within 1 minute, only have 2~3 minutes of backup power is completely acceptable!
 
+### Commercial Product Availability
 I am aware of one (somewhat) commercial product in this class, the [RAM Ultra UPS 8000](http://www.ramtechno.com/articles/13-ram-ultra-ups-8000).
 I discovered its availability after I have finished designing V2 and waiting for prototype board.
 
