@@ -106,7 +106,7 @@ My design incorporates four major features that I deem important for the applica
 
   Two months later, actually my first PCB, ever. :)
 
-  <img src="SCAP1Render.PNG" width="384"> <img src="SCAP1Assembled.jpg" width="384">
+  <img src="SCAP1Render.PNG" height="384"> <img src="SCAP1Assembled.jpg" height="384">
 
   It does not handle capacitor charging rate control, output voltage regulation, or MCU integration.
   The first two functions were to be achieved by external modules, such as [PT4115 constant current driver](https://www.google.com/search?hl=en&site=imghp&tbm=isch&source=hp&q=constant+current+driver+board+with+PT4115), and [adjustable boost regulators](https://www.google.com/search?hl=en&site=imghp&tbm=isch&source=hp&q=boost+regulator+module).
@@ -117,7 +117,7 @@ My design incorporates four major features that I deem important for the applica
 
   As you can see, it looks significantly more sophisticated and mature than V1.
 
-  <img src="SCAP2Render.PNG" width="384"> <img src="SCAP2Assembled.jpg" width="384">
+  <img src="SCAP2Render.PNG" height="320"> <img src="SCAP2Assembled.jpg" height="320">
 
   It was completed 10 months after I started PCB designing. At that point I have already successfully done over 8 smaller projects, involving experiment with many SMPS, for my [ESP8266 batter powering project](/Adam5Wu/Micro-power-SMPS).
   
@@ -132,7 +132,7 @@ My design incorporates four major features that I deem important for the applica
   
   1. Completely eliminate mechanical relay use
   2. Increased voltage hysteresis for super capacitor, from 4.3v-off-5v-on to 4.3v-off-8.8v-on
-  3. Configurable power out soft-start based on capacitor charge progress; keep power out off until capacitor reaches 8.8v
+  3. Configurable power out soft-start -- no power out until capacitor reaches 8.8v
   4. Ability to power off MCU circuits
 
 ## Layout Software Used
