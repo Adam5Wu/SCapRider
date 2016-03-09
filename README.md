@@ -96,9 +96,15 @@ My design incorporates four major features that I deem important for the applica
 4. "Smart" and Internet-enabled: When power events happen (such as power failure and restoration, backup reserve depletion), you could programmatically respond to those events, such as getting email notifications, asserting alarms (to cameras), etc. This is made possible thanks to the all-mighty tiny WiFi SoC, ESP8266.
 
 ## Version History
+V0 never made it to the sun.
+Back in early 2015, I never learned PCB design at that time.
+I was trying to prototype *by hand* using breadboards PCBs, not a very good idea with more than 10 nets and 20 solder points.
+Clearly, custom PCB is the way to go. I therefore started to learn how to design PCBs
+
 V1 was mostly based on diodes and relays.
+Actually my first PCB, ever. :)
 It does not handle capacitor charging rate control, output voltage regulation, or MCU integration.
-Those two functions were to be achieved by external COTS (Commercial Off-The-Shelf) modules, such as PT4115 constant current driver, and adjustable boost regulators.
+The first two functions were to be achieved by external modules, such as [PT4115 constant current driver](https://www.google.com/search?hl=en&site=imghp&tbm=isch&source=hp&q=constant+current+driver+board+with+PT4115), and [adjustable boost regulators](https://www.google.com/search?hl=en&site=imghp&tbm=isch&source=hp&q=boost+regulator+module).
 
 There is also one design issue -- double-throw relays are usually break-before-make, so there exists a total disconnection state, when relay changes states from one to another. However, for electro-magnetic mechanical relays, if the voltage change is slow enough, the total disconnection state can be quite long, up to several minutes!
 
