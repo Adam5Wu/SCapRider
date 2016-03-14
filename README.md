@@ -95,6 +95,26 @@ My design incorporates four major features that I deem important for the applica
 3. Output regulation: To efficiently extract energy in super capacitors, buck-boost output voltage regulation is provided.
 4. "Smart" and Internet-enabled: When power events happen (such as power failure and restoration, backup reserve depletion), you could programmatically respond to those events, such as getting email notifications, asserting alarms (to cameras), etc. This is made possible thanks to the all-mighty tiny WiFi SoC, ESP8266.
 
+## Schematics
+
+### Power Input
+![Power Input](SCap2R-1.PNG)
+
+### Backup Power Gate
+![Backup Power Gate](SCap2R-2.PNG)
+
+### Backup Charger
+![Backup Charger](SCap2R-3.PNG)
+
+### Main/Backup Auto-Switching Regulator
+![Main/Backup Regulator](SCap2R-4.PNG)
+
+### MCU and Control Switches
+![MCU and Control Switches](SCap2R-5.PNG)
+
+### Power Output
+![Power Output](SCap2R-6.PNG)
+
 ## Version History
 * V0 never made it to the sun.
 
