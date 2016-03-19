@@ -151,9 +151,10 @@ My design incorporates four major features that I deem important for the applica
   It is an improved version of V2, on the following aspects:
   
   1. Completely eliminate mechanical relay use
-  2. Increased voltage hysteresis for super capacitor, from 4.3v-off-5v-on to 4.3v-off-8.8v-on
-  3. Configurable power out soft-start -- no power out until capacitor reaches 8.8v
-  4. Ability to power off MCU circuits
+  2. Better transient over-voltage protections
+  3. Increased voltage hysteresis for super capacitor, from 4.3v-off-5v-on to 4.3v-off-8.8v-on
+  4. Configurable power out soft-start -- no power out until capacitor reaches 8.8v
+  5. Ability to power off MCU circuits
 
 ## Layout Software Used
 PCBWeb http://www.pcbweb.com/
