@@ -4,8 +4,10 @@
   1. [Battery-based Solutions](#battery-based-solutions)
   2. [SuperCapacitor-based Solutions](#supercapacitor-based-solutions)
 3. [Current Design](#current-design)
-  1. [Version History](#version-history)
-  2. [Layout Software Used](#layout-software-used)
+  1. [Schematics](#Schematics-_v3)
+  2. [PCB Layout](#pcb-layout--v3)
+  3. [Version History](#version-history)
+  4. [Layout Software Used](#layout-software-used)
 4. [License](#license)
 
 ---
@@ -95,7 +97,7 @@ My design incorporates four major features that I deem important for the applica
 3. Output regulation: To efficiently extract energy in super capacitors, buck-boost output voltage regulation is provided.
 4. "Smart" and Internet-enabled: When power events happen (such as power failure and restoration, backup reserve depletion), you could programmatically respond to those events, such as getting email notifications, asserting alarms (to cameras), etc. This is made possible thanks to the all-mighty tiny WiFi SoC, ESP8266.
 
-## Schematics
+## Schematics (V3)
 
 ### Power Input
 ![Power Input](SCap2R-1.PNG)
@@ -114,6 +116,19 @@ My design incorporates four major features that I deem important for the applica
 
 ### Power Output
 ![Power Output](SCap2R-6.PNG)
+
+## PCB Layout (V3)
+4 layer PCB, 1oz-0.5oz-0.5oz-1oz
+
+### Front & Back Overview
+![PCB Overview - Front](SCap2R_PCB_Front.PNG)
+![PCB Overview - Back](SCap2R_PCB_Back.PNG)
+
+### Per-Layer Layout
+![PCB Layer - 1st](SCap2R_LO-A.PNG)
+![PCB Layer - 2nd](SCap2R_LO-B.PNG)
+![PCB Layer - 3rd](SCap2R_LO-C.PNG)
+![PCB Layer - 4th](SCap2R_LO-D.PNG)
 
 ## Version History
 * V0 never made it to the sun.
