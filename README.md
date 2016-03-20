@@ -4,7 +4,7 @@
   1. [Battery-based Solutions](#battery-based-solutions)
   2. [SuperCapacitor-based Solutions](#supercapacitor-based-solutions)
 3. [Current Design](#current-design)
-  1. [Schematics](#Schematics-v3)
+  1. [Schematics](#schematics-v3)
   2. [PCB Layout](#pcb-layout-v3)
   3. [Version History](#version-history)
   4. [Layout Software Used](#layout-software-used)
@@ -161,7 +161,7 @@ My design incorporates four major features that I deem important for the applica
 
   A minor design flaw was uncovered during prototype assembly -- the current path control should draw voltage before indicator LED, not after, as LEDs are diodes, which incur voltage drops, and thus rendered the control signal unreliable. The rendered PCB image above already corrected the problem.
 
-* V3 is currently being designed.
+* V3 design and layout has been finished, pending several rounds of manual checks before PCB ordering.
 
   It is an improved version of V2, on the following aspects:
   
