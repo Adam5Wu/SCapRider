@@ -163,7 +163,7 @@ My design incorporates four major features that I deem important for the applica
 
 * V3 design and layout has been finished, pending several rounds of manual checks before PCB ordering.
 
-  It is an improved version of V2, on the following aspects:
+  It features improved design based on V2, on the following aspects:
   
   1. Completely eliminate mechanical relay use
   2. Better transient over-voltage protections
@@ -172,6 +172,13 @@ My design incorporates four major features that I deem important for the applica
   5. Ability to adjust input and backup capacitor voltage thresholds
   6. Ability to adjust output voltage (8.5~13.2v)
   7. Ability to power off MCU circuits
+
+  In addition, the PCB layout has been completely re-done:
+  
+  1. Instead of 2 layer in V2, it uses 4 layer design, with (mostly) dedicated groud plane
+  2. Try to follow layout recommendations from chip manufacture wherever possible
+  3. Pay special attention to main current path, allocating as wide trace as possible
+  4. Put components on both top and bottom to reduce board size (4 layer boards are expensive! :D)
 
 ## Layout Software Used
 PCBWeb http://www.pcbweb.com/
