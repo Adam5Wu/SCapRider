@@ -161,7 +161,9 @@ My design incorporates four major features that I deem important for the applica
 
   A minor design flaw was uncovered during prototype assembly -- the current path control should draw voltage before indicator LED, not after, as LEDs are diodes, which incur voltage drops, and thus rendered the control signal unreliable. The rendered PCB image above already corrected the problem.
 
-* V3 design and layout has been finished, pending several rounds of manual checks before PCB ordering.
+* V3 design and layout has been finished, 3 round of manual checkes solved some minor errors.
+  In addition, found some defects in PCBWeb, submitted bug reports and project sources for their reference. :)
+  First production is being ordered, ETA mid-May.
 
   It features improved design based on V2, on the following aspects:
   
